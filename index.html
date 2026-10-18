@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Selfie Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <div class="logo">📸</div>
+    <p class="eyebrow">SELFIE STUDIO</p>
+    <h1>Capture a moment</h1>
+    <p class="description">
+      Take a selfie using your front camera and Rate Your Self! 
+    </p>
+
+    <div class="notice">
+      <strong>Before continuing</strong>
+      <p>
+        Your camera will activate after you agree and grant
+        browser permission. A photo will be captured automatically
+        and shown to youyou only. 
+      </p>
+    </div>
+
+    <label class="consent">
+      <input type="checkbox" id="consent">
+      <span>
+        I agree to camera access and understand that I can
+        review my selfie and Rate it. 
+      </span>
+    </label>
+
+    <button id="startBtn">Agree & Start Camera</button>
+    <button id="cancelBtn" class="secondary" hidden>Cancel</button>
+
+    <p id="status" role="status" aria-live="polite">
+      Waiting for your consent.
+    </p>
+
+    <section id="cameraPanel" hidden>
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas" hidden></canvas>
+      <img id="preview" alt="Your captured selfie" hidden>
+
+      <button id="retakeBtn" class="secondary" hidden>Retake Selfie</button>
+      <button id="sendBtn" hidden>Rate Your Selfie</button>
+    </section>
+
+    <p class="footer">
+      Camera permission is controlled by your browser.
+    </p>
+  </main>
+</body>
+</html>
